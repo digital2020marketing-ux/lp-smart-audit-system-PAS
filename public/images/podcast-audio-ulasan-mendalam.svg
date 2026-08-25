@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" fill="none">
+  <defs>
+    <linearGradient id="bg-pod" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b0764" />
+      <stop offset="40%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+    <linearGradient id="purple-btn" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#7c3aed" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="640" height="400" rx="16" fill="url(#bg-pod)"/>
+  
+  <!-- Equalizer Ambient Circles -->
+  <circle cx="520" cy="120" r="140" fill="#a855f7" fill-opacity="0.12"/>
+  <circle cx="120" cy="280" r="120" fill="#6366f1" fill-opacity="0.12"/>
+
+  <!-- Podcast Player Window -->
+  <g transform="translate(30, 24)">
+    <rect width="580" height="352" rx="14" fill="#0b0f19" stroke="#9333ea" stroke-width="1.5" stroke-opacity="0.7"/>
+    
+    <!-- Top Player Header -->
+    <rect width="580" height="40" rx="14" fill="#1e1b4b"/>
+    <rect y="28" width="580" height="12" fill="#1e1b4b"/>
+    <line x1="0" y1="40" x2="580" y2="40" stroke="#3730a3" stroke-width="1"/>
+    
+    <circle cx="22" cy="20" r="5" fill="#ef4444"/>
+    <circle cx="38" cy="20" r="5" fill="#f59e0b"/>
+    <circle cx="54" cy="20" r="5" fill="#10b981"/>
+    
+    <text x="76" y="25" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Audio Podcast Ulasan Mendalam - SMART Audit</text>
+    
+    <rect x="470" y="10" width="94" height="20" rx="6" fill="#a855f7" fill-opacity="0.2" stroke="#a855f7" stroke-width="1"/>
+    <text x="517" y="24" text-anchor="middle" fill="#d8b4fe" font-family="system-ui, sans-serif" font-size="10" font-weight="700">STUDI KASUS</text>
+
+    <!-- Main Player Card -->
+    <g transform="translate(24, 60)">
+      <!-- Left: Album Art Box -->
+      <rect width="140" height="140" rx="12" fill="#1e1b4b" stroke="#a855f7" stroke-width="1.5"/>
+      <circle cx="70" cy="70" r="42" fill="#3b0764" stroke="#c084fc" stroke-width="2"/>
+      <polygon points="64,56 82,70 64,84" fill="#f3e8ff"/>
+      <text x="70" y="126" text-anchor="middle" fill="#d8b4fe" font-family="system-ui, sans-serif" font-size="10" font-weight="800">SMART PODCAST</text>
+
+      <!-- Right: Track Details & Waveform -->
+      <g transform="translate(160, 10)">
+        <text x="0" y="16" fill="#c084fc" font-family="system-ui, sans-serif" font-size="11" font-weight="800">EPISODE 04 • PRAKTIK LAPANGAN</text>
+        <text x="0" y="40" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="800">Psikologi Menghadapi Auditee Defensif</text>
+        <text x="0" y="60" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Teknik komunikasi persuasif dan formulasi temuan tanpa memicu konflik.</text>
+
+        <!-- Waveform Simulation -->
+        <g transform="translate(0, 80)">
+          <!-- Dynamic bars -->
+          <rect x="0" y="10" width="4" height="20" rx="2" fill="#a855f7"/>
+          <rect x="8" y="4" width="4" height="32" rx="2" fill="#c084fc"/>
+          <rect x="16" y="0" width="4" height="40" rx="2" fill="#e879f9"/>
+          <rect x="24" y="8" width="4" height="24" rx="2" fill="#c084fc"/>
+          <rect x="32" y="14" width="4" height="12" rx="2" fill="#a855f7"/>
+          <rect x="40" y="2" width="4" height="36" rx="2" fill="#c084fc"/>
+          <rect x="48" y="6" width="4" height="28" rx="2" fill="#e879f9"/>
+          <rect x="56" y="12" width="4" height="16" rx="2" fill="#a855f7"/>
+          <rect x="64" y="0" width="4" height="40" rx="2" fill="#e879f9"/>
+          <rect x="72" y="8" width="4" height="24" rx="2" fill="#c084fc"/>
+          <rect x="80" y="4" width="4" height="32" rx="2" fill="#e879f9"/>
+          <rect x="88" y="14" width="4" height="12" rx="2" fill="#a855f7"/>
+          <rect x="96" y="2" width="4" height="36" rx="2" fill="#c084fc"/>
+          <rect x="104" y="10" width="4" height="20" rx="2" fill="#a855f7"/>
+          <rect x="112" y="0" width="4" height="40" rx="2" fill="#e879f9"/>
+          <rect x="120" y="6" width="4" height="28" rx="2" fill="#c084fc"/>
+          <rect x="128" y="12" width="4" height="16" rx="2" fill="#a855f7"/>
+          <rect x="136" y="4" width="4" height="32" rx="2" fill="#e879f9"/>
+          <rect x="144" y="10" width="4" height="20" rx="2" fill="#a855f7"/>
+          <rect x="152" y="0" width="4" height="40" rx="2" fill="#c084fc"/>
+          <rect x="160" y="8" width="4" height="24" rx="2" fill="#a855f7"/>
+          <rect x="168" y="14" width="4" height="12" rx="2" fill="#64748b"/>
+          <rect x="176" y="16" width="4" height="8" rx="2" fill="#475569"/>
+          <rect x="184" y="18" width="4" height="4" rx="2" fill="#334155"/>
+          <rect x="192" y="18" width="4" height="4" rx="2" fill="#334155"/>
+          <rect x="200" y="16" width="4" height="8" rx="2" fill="#334155"/>
+          <rect x="208" y="18" width="4" height="4" rx="2" fill="#334155"/>
+          <rect x="216" y="18" width="4" height="4" rx="2" fill="#334155"/>
+          <rect x="224" y="16" width="4" height="8" rx="2" fill="#334155"/>
+          <rect x="232" y="18" width="4" height="4" rx="2" fill="#334155"/>
+          <rect x="240" y="18" width="4" height="4" rx="2" fill="#334155"/>
+          <rect x="248" y="18" width="4" height="4" rx="2" fill="#334155"/>
+          <rect x="256" y="18" width="4" height="4" rx="2" fill="#334155"/>
+          <rect x="264" y="18" width="4" height="4" rx="2" fill="#334155"/>
+          <rect x="272" y="18" width="4" height="4" rx="2" fill="#334155"/>
+          <rect x="280" y="18" width="4" height="4" rx="2" fill="#334155"/>
+          <rect x="288" y="18" width="4" height="4" rx="2" fill="#334155"/>
+          <rect x="296" y="18" width="4" height="4" rx="2" fill="#334155"/>
+          <rect x="304" y="18" width="4" height="4" rx="2" fill="#334155"/>
+          <rect x="312" y="18" width="4" height="4" rx="2" fill="#334155"/>
+          <rect x="320" y="18" width="4" height="4" rx="2" fill="#334155"/>
+          <rect x="328" y="18" width="4" height="4" rx="2" fill="#334155"/>
+          <rect x="336" y="18" width="4" height="4" rx="2" fill="#334155"/>
+          <rect x="344" y="18" width="4" height="4" rx="2" fill="#334155"/>
+          <rect x="352" y="18" width="4" height="4" rx="2" fill="#334155"/>
+          <rect x="360" y="18" width="4" height="4" rx="2" fill="#334155"/>
+          
+          <text x="0" y="38" fill="#a855f7" font-family="monospace" font-size="10" font-weight="700">14:28</text>
+          <text x="340" y="38" fill="#64748b" font-family="monospace" font-size="10" font-weight="700">28:45</text>
+        </g>
+      </g>
+
+      <!-- Bottom Playlist Bar -->
+      <g transform="translate(0, 160)">
+        <rect width="532" height="54" rx="8" fill="#131127" stroke="#2e1065" stroke-width="1"/>
+        <text x="14" y="24" fill="#f3e8ff" font-family="system-ui, sans-serif" font-size="11" font-weight="700">Tersedia 8 Seri Podcast Pembelajaran:</text>
+        <text x="14" y="42" fill="#a855f7" font-family="system-ui, sans-serif" font-size="10">Klausul Kunci • Jebakan Auditee • Sampling Cerdas • Verifikasi Bukti • Closing Sukses</text>
+        <rect x="424" y="12" width="94" height="30" rx="6" fill="url(#purple-btn)"/>
+        <text x="471" y="31" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="800">Dengarkan HD</text>
+      </g>
+    </g>
+  </g>
+</svg>

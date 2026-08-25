@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" fill="none">
+  <defs>
+    <linearGradient id="bg-sheet" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b" />
+      <stop offset="30%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#14532d" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="640" height="400" rx="16" fill="url(#bg-sheet)"/>
+
+  <!-- Spreadsheet Window -->
+  <g transform="translate(24, 20)">
+    <rect width="592" height="360" rx="12" fill="#09131a" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.6"/>
+    
+    <!-- Title Bar Excel Green -->
+    <rect width="592" height="38" rx="12" fill="#15803d"/>
+    <rect y="26" width="592" height="12" fill="#15803d"/>
+    <line x1="0" y1="38" x2="592" y2="38" stroke="#166534" stroke-width="1"/>
+    
+    <circle cx="20" cy="19" r="5" fill="#ef4444"/>
+    <circle cx="36" cy="19" r="5" fill="#f59e0b"/>
+    <circle cx="52" cy="19" r="5" fill="#22c55e"/>
+    
+    <text x="74" y="24" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="700">7 Worksheet &amp; Formulir Standar Audit Mutu Internal (AMI)</text>
+    
+    <rect x="478" y="9" width="98" height="20" rx="6" fill="#ffffff" fill-opacity="0.2"/>
+    <text x="527" y="23" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="800">.XLSX &amp; .DOCX</text>
+
+    <!-- Spreadsheet Table Mockup -->
+    <g transform="translate(16, 50)">
+      <!-- Sheet Tabs Header -->
+      <g transform="translate(0, 0)">
+        <rect width="110" height="24" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <text x="55" y="16" text-anchor="middle" fill="#6ee7b7" font-family="system-ui, sans-serif" font-size="10" font-weight="700">1. Jadwal AMI</text>
+        
+        <rect x="114" y="0" width="110" height="24" rx="4" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+        <text x="169" y="16" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">2. Audit Plan</text>
+
+        <rect x="228" y="0" width="110" height="24" rx="4" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+        <text x="283" y="16" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">3. Checklist</text>
+
+        <rect x="342" y="0" width="110" height="24" rx="4" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+        <text x="397" y="16" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">4. Form PLOR</text>
+
+        <rect x="456" y="0" width="104" height="24" rx="4" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+        <text x="508" y="16" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">5. Log CAPA</text>
+      </g>
+
+      <!-- Table Grid -->
+      <g transform="translate(0, 32)">
+        <!-- Table Header Row -->
+        <rect width="560" height="26" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <text x="14" y="17" fill="#cbd5e1" font-family="monospace" font-size="10" font-weight="700">NO</text>
+        <text x="50" y="17" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="10" font-weight="700">DEPARTEMEN / AUDITEE</text>
+        <text x="230" y="17" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="10" font-weight="700">KLAUSUL ISO</text>
+        <text x="340" y="17" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="10" font-weight="700">AUDITOR</text>
+        <text x="440" y="17" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="10" font-weight="700">STATUS TEMUAN</text>
+
+        <!-- Row 1 -->
+        <rect y="26" width="560" height="34" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+        <text x="14" y="47" fill="#94a3b8" font-family="monospace" font-size="10">01</text>
+        <text x="50" y="47" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Purchasing &amp; Vendor</text>
+        <text x="230" y="47" fill="#38bdf8" font-family="monospace" font-size="10">Klausul 8.4</text>
+        <text x="340" y="47" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Dedi H. (Lead)</text>
+        <rect x="440" y="32" width="76" height="20" rx="4" fill="#ef4444" fill-opacity="0.2"/>
+        <text x="478" y="46" text-anchor="middle" fill="#f87171" font-family="system-ui, sans-serif" font-size="9" font-weight="700">1 Temuan Mayor</text>
+
+        <!-- Row 2 -->
+        <rect y="60" width="560" height="34" fill="#0b1118" stroke="#1e293b" stroke-width="1"/>
+        <text x="14" y="81" fill="#94a3b8" font-family="monospace" font-size="10">02</text>
+        <text x="50" y="81" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Gudang &amp; Logistik</text>
+        <text x="230" y="81" fill="#38bdf8" font-family="monospace" font-size="10">Klausul 7.1.5</text>
+        <text x="340" y="81" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Siti R. (Auditor)</text>
+        <rect x="440" y="66" width="76" height="20" rx="4" fill="#f59e0b" fill-opacity="0.2"/>
+        <text x="478" y="80" text-anchor="middle" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="9" font-weight="700">2 Minor PLOR</text>
+
+        <!-- Row 3 -->
+        <rect y="94" width="560" height="34" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+        <text x="14" y="115" fill="#94a3b8" font-family="monospace" font-size="10">03</text>
+        <text x="50" y="115" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Produksi &amp; QA</text>
+        <text x="230" y="115" fill="#38bdf8" font-family="monospace" font-size="10">Klausul 8.5, 8.6</text>
+        <text x="340" y="115" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Ahmad B.</text>
+        <rect x="440" y="100" width="76" height="20" rx="4" fill="#10b981" fill-opacity="0.2"/>
+        <text x="478" y="114" text-anchor="middle" fill="#34d399" font-family="system-ui, sans-serif" font-size="9" font-weight="700">Memuaskan</text>
+
+        <!-- Row 4 -->
+        <rect y="128" width="560" height="34" fill="#0b1118" stroke="#1e293b" stroke-width="1"/>
+        <text x="14" y="149" fill="#94a3b8" font-family="monospace" font-size="10">04</text>
+        <text x="50" y="149" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="11" font-weight="600">HRD &amp; Training</text>
+        <text x="230" y="149" fill="#38bdf8" font-family="monospace" font-size="10">Klausul 7.2, 7.3</text>
+        <text x="340" y="149" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Dedi H.</text>
+        <rect x="440" y="134" width="76" height="20" rx="4" fill="#3b82f6" fill-opacity="0.2"/>
+        <text x="478" y="148" text-anchor="middle" fill="#60a5fa" font-family="system-ui, sans-serif" font-size="9" font-weight="700">Observasi (OFI)</text>
+      </g>
+
+      <!-- Bottom Status -->
+      <g transform="translate(0, 208)">
+        <rect width="560" height="42" rx="6" fill="#062e20" stroke="#047857" stroke-width="1"/>
+        <text x="16" y="26" fill="#6ee7b7" font-family="system-ui, sans-serif" font-size="11" font-weight="700">✓ 7 Template Resmi Termasuk Laporan Ringkasan Manajemen &amp; Matriks Auditor</text>
+      </g>
+    </g>
+  </g>
+</svg>

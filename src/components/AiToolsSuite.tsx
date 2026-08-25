@@ -70,23 +70,22 @@ export const AiToolsSuite: React.FC<AiToolsSuiteProps> = () => {
               {/* Real UI Screenshot Preview */}
               <div className="w-full lg:w-5/12">
                 <div className="rounded-2xl overflow-hidden border border-emerald-500/40 bg-slate-950 p-2 shadow-2xl group">
-                  <a 
-                    href="https://smartbook.id/kumpulan-gambar/Cek-List-Audit-dan-Simulasi.jpg" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="block"
-                  >
+                  <div className="block">
                     <img 
                       src={imgCekList} 
                       referrerPolicy="no-referrer"
                       onError={(e) => {
-                        (e.currentTarget as HTMLImageElement).src = "https://smartbook.id/kumpulan-gambar/Cek-List-Audit-dan-Simulasi.jpg";
+                        const target = e.currentTarget as HTMLImageElement;
+                        if (!target.dataset.failed) {
+                          target.dataset.failed = 'true';
+                          target.src = "/images/Cek-List-Audit-dan-Simulasi.jpg";
+                        }
                       }}
                       alt="Cek List Audit dan Simulasi" 
                       className="w-full h-auto rounded-xl object-cover group-hover:scale-[1.01] transition-transform duration-200"
                       loading="lazy"
                     />
-                  </a>
+                  </div>
                   <div className="mt-2 px-2 py-1 flex items-center justify-between text-[10px] text-slate-400 font-mono">
                     <span className="text-emerald-400 font-bold">AI_CHECKLIST_ENGINE</span>
                     <span className="text-slate-400">ISO 9001:2015</span>
@@ -130,23 +129,22 @@ export const AiToolsSuite: React.FC<AiToolsSuiteProps> = () => {
               {/* Real UI Screenshot Preview */}
               <div className="w-full lg:w-5/12">
                 <div className="rounded-2xl overflow-hidden border border-blue-500/40 bg-slate-950 p-2 shadow-2xl group">
-                  <a 
-                    href="https://smartbook.id/kumpulan-gambar/Generator-Laporan-Temuan-PLOR.jpg" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="block"
-                  >
+                  <div className="block">
                     <img 
                       src={imgPlor} 
                       referrerPolicy="no-referrer"
                       onError={(e) => {
-                        (e.currentTarget as HTMLImageElement).src = "https://smartbook.id/kumpulan-gambar/Generator-Laporan-Temuan-PLOR.jpg";
+                        const target = e.currentTarget as HTMLImageElement;
+                        if (!target.dataset.failed) {
+                          target.dataset.failed = 'true';
+                          target.src = "/images/Generator-Laporan-Temuan-PLOR.jpg";
+                        }
                       }}
                       alt="Generator Laporan Temuan PLOR" 
                       className="w-full h-auto rounded-xl object-cover group-hover:scale-[1.01] transition-transform duration-200"
                       loading="lazy"
                     />
-                  </a>
+                  </div>
                   <div className="mt-2 px-2 py-1 flex items-center justify-between text-[10px] text-slate-400 font-mono">
                     <span className="text-blue-400 font-bold">AI_PLOR_FORMULATOR</span>
                     <span className="text-slate-400">ISO 19011</span>
@@ -190,23 +188,22 @@ export const AiToolsSuite: React.FC<AiToolsSuiteProps> = () => {
               {/* Real UI Screenshot Preview */}
               <div className="w-full lg:w-5/12">
                 <div className="rounded-2xl overflow-hidden border border-amber-500/40 bg-slate-950 p-2 shadow-2xl group">
-                  <a 
-                    href="https://smartbook.id/kumpulan-gambar/CAPA%20.jpg" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="block"
-                  >
+                  <div className="block">
                     <img 
                       src={imgCapa} 
                       referrerPolicy="no-referrer"
                       onError={(e) => {
-                        (e.currentTarget as HTMLImageElement).src = "https://smartbook.id/kumpulan-gambar/CAPA%20.jpg";
+                        const target = e.currentTarget as HTMLImageElement;
+                        if (!target.dataset.failed) {
+                          target.dataset.failed = 'true';
+                          target.src = "/images/CAPA.jpg";
+                        }
                       }}
                       alt="CAPA 5-Why Analysis Assistant" 
                       className="w-full h-auto rounded-xl object-cover group-hover:scale-[1.01] transition-transform duration-200"
                       loading="lazy"
                     />
-                  </a>
+                  </div>
                   <div className="mt-2 px-2 py-1 flex items-center justify-between text-[10px] text-slate-400 font-mono">
                     <span className="text-amber-400 font-bold">5_WHY_ROOT_CAUSE_ENGINE</span>
                     <span className="text-slate-400">CAPA Flow</span>
@@ -250,23 +247,22 @@ export const AiToolsSuite: React.FC<AiToolsSuiteProps> = () => {
               {/* Real UI Screenshot Preview */}
               <div className="w-full lg:w-5/12">
                 <div className="rounded-2xl overflow-hidden border border-purple-500/40 bg-slate-950 p-2 shadow-2xl group">
-                  <a 
-                    href="https://smartbook.id/kumpulan-gambar/ISO-19011.jpg" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="block"
-                  >
+                  <div className="block">
                     <img 
                       src={imgIso19011} 
                       referrerPolicy="no-referrer"
                       onError={(e) => {
-                        (e.currentTarget as HTMLImageElement).src = "https://smartbook.id/kumpulan-gambar/ISO-19011.jpg";
+                        const target = e.currentTarget as HTMLImageElement;
+                        if (!target.dataset.failed) {
+                          target.dataset.failed = 'true';
+                          target.src = "/images/ISO-19011.jpg";
+                        }
                       }}
                       alt="ISO 19011 Co-Pilot Assistant" 
                       className="w-full h-auto rounded-xl object-cover group-hover:scale-[1.01] transition-transform duration-200"
                       loading="lazy"
                     />
-                  </a>
+                  </div>
                   <div className="mt-2 px-2 py-1 flex items-center justify-between text-[10px] text-slate-400 font-mono">
                     <span className="text-purple-400 font-bold">ISO_19011_COPILOT</span>
                     <span className="text-slate-400">Direct Chat</span>

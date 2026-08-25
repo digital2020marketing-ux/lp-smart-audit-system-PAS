@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
-import { Gift, BookOpen, Headphones, HelpCircle, CheckCircle2, Sparkles, X, ZoomIn } from 'lucide-react';
+import React from 'react';
+import { Gift, BookOpen, Headphones, HelpCircle, CheckCircle2, Sparkles } from 'lucide-react';
 import imgModules from '../assets/images/9-modul.jpg';
 import imgPodcast from '../assets/images/podcast-audio-ulasan-mendalam.jpg';
 import imgEvaluation from '../assets/images/EVALUASI-PRE-TEST-DAN-POST-TEST.jpg';
 
 export const ThreeLayersBonus: React.FC = () => {
-  const [zoomBonus, setZoomBonus] = useState<{ src: string; title: string; fallback: string } | null>(null);
-
   return (
     <section id="bonus-khusus" className="py-14 sm:py-20 bg-slate-50 border-b border-gray-200">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
@@ -33,23 +31,20 @@ export const ThreeLayersBonus: React.FC = () => {
             <div className="flex flex-col md:flex-row gap-6 items-center">
               
               <div className="w-full md:w-5/12">
-                <div 
-                  onClick={() => setZoomBonus({ src: imgModules, title: '9 Modul Pembelajaran Audit Internal (ISO 9001 & ISO 19011)', fallback: '/images/9-modul.jpg' })}
-                  className="rounded-2xl overflow-hidden border border-gray-200 shadow-xs bg-slate-100 cursor-pointer group relative"
-                >
+                <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-xs bg-slate-100 relative">
                   <img 
                     src={imgModules} 
+                    referrerPolicy="no-referrer"
                     onError={(e) => {
-                      (e.currentTarget as HTMLImageElement).src = '/images/9-modul.jpg';
+                      const target = e.currentTarget as HTMLImageElement;
+                      if (!target.dataset.failed) {
+                        target.dataset.failed = 'true';
+                        target.src = '/images/9-modul.jpg';
+                      }
                     }}
                     alt="9 Modul Pembelajaran Audit Internal" 
-                    className="w-full h-auto object-cover block group-hover:scale-[1.02] transition-transform duration-200"
+                    className="w-full h-auto object-cover block"
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
-                    <span className="bg-slate-900/80 text-white text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-md">
-                      <ZoomIn className="w-3.5 h-3.5" /> Perbesar
-                    </span>
-                  </div>
                 </div>
               </div>
 
@@ -82,23 +77,20 @@ export const ThreeLayersBonus: React.FC = () => {
             <div className="flex flex-col md:flex-row gap-6 items-center">
               
               <div className="w-full md:w-5/12">
-                <div 
-                  onClick={() => setZoomBonus({ src: imgPodcast, title: 'Podcast Audio Ulasan Audit 9 Seri', fallback: '/images/podcast-audio-ulasan-mendalam.jpg' })}
-                  className="rounded-2xl overflow-hidden border border-gray-200 shadow-xs bg-slate-100 cursor-pointer group relative"
-                >
+                <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-xs bg-slate-100 relative">
                   <img 
                     src={imgPodcast} 
+                    referrerPolicy="no-referrer"
                     onError={(e) => {
-                      (e.currentTarget as HTMLImageElement).src = '/images/podcast-audio-ulasan-mendalam.jpg';
+                      const target = e.currentTarget as HTMLImageElement;
+                      if (!target.dataset.failed) {
+                        target.dataset.failed = 'true';
+                        target.src = '/images/podcast-audio-ulasan-mendalam.jpg';
+                      }
                     }}
                     alt="Podcast Audio Ulasan Audit 9 Seri" 
-                    className="w-full h-auto object-cover block group-hover:scale-[1.02] transition-transform duration-200"
+                    className="w-full h-auto object-cover block"
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
-                    <span className="bg-slate-900/80 text-white text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-md">
-                      <ZoomIn className="w-3.5 h-3.5" /> Perbesar
-                    </span>
-                  </div>
                 </div>
               </div>
 
@@ -131,23 +123,20 @@ export const ThreeLayersBonus: React.FC = () => {
             <div className="flex flex-col md:flex-row gap-6 items-center">
               
               <div className="w-full md:w-5/12">
-                <div 
-                  onClick={() => setZoomBonus({ src: imgEvaluation, title: 'Pre-Test & Post-Test + AI Asisten AMI', fallback: '/images/EVALUASI-PRE-TEST-DAN-POST-TEST.jpg' })}
-                  className="rounded-2xl overflow-hidden border border-gray-200 shadow-xs bg-slate-100 cursor-pointer group relative"
-                >
+                <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-xs bg-slate-100 relative">
                   <img 
                     src={imgEvaluation} 
+                    referrerPolicy="no-referrer"
                     onError={(e) => {
-                      (e.currentTarget as HTMLImageElement).src = '/images/EVALUASI-PRE-TEST-DAN-POST-TEST.jpg';
+                      const target = e.currentTarget as HTMLImageElement;
+                      if (!target.dataset.failed) {
+                        target.dataset.failed = 'true';
+                        target.src = '/images/EVALUASI-PRE-TEST-DAN-POST-TEST.jpg';
+                      }
                     }}
                     alt="Pre-Test & Post-Test plus AI Asisten AMI" 
-                    className="w-full h-auto object-cover block group-hover:scale-[1.02] transition-transform duration-200"
+                    className="w-full h-auto object-cover block"
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
-                    <span className="bg-slate-900/80 text-white text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-md">
-                      <ZoomIn className="w-3.5 h-3.5" /> Perbesar
-                    </span>
-                  </div>
                 </div>
               </div>
 
@@ -178,42 +167,6 @@ export const ThreeLayersBonus: React.FC = () => {
         </div>
 
       </div>
-
-      {/* Lightbox Modal */}
-      {zoomBonus && (
-        <div 
-          className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6"
-          onClick={() => setZoomBonus(null)}
-        >
-          <div 
-            className="relative max-w-3xl w-full bg-slate-950 rounded-2xl overflow-hidden shadow-2xl border border-slate-800 flex flex-col max-h-[92vh]"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="px-4 py-3 bg-slate-950 border-b border-slate-800 flex items-center justify-between text-white">
-              <span className="text-xs sm:text-sm font-bold text-slate-200 truncate pr-4">
-                {zoomBonus.title}
-              </span>
-              <button
-                onClick={() => setZoomBonus(null)}
-                className="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center transition-colors cursor-pointer shrink-0"
-                aria-label="Tutup"
-              >
-                <X className="w-4 h-4" />
-              </button>
-            </div>
-            <div className="flex-1 overflow-auto p-2 sm:p-4 bg-slate-950 flex items-center justify-center">
-              <img 
-                src={zoomBonus.src} 
-                onError={(e) => {
-                  (e.currentTarget as HTMLImageElement).src = zoomBonus.fallback;
-                }}
-                alt={zoomBonus.title}
-                className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-lg"
-              />
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 };

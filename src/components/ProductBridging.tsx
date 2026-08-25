@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Bot, FileSpreadsheet, Sparkles, CheckCircle2, ArrowRight, ArrowDown, Layers, FileText, Activity, Workflow, Shield, X, ZoomIn } from 'lucide-react';
+import React from 'react';
+import { Bot, FileSpreadsheet, Sparkles, CheckCircle2, ArrowRight, ArrowDown, Layers, FileText, Activity, Workflow, Shield } from 'lucide-react';
 import imgAiSuite from '../assets/images/5-AI-TOOLS-dan-SIMULASI.jpg';
 import imgWorksheets from '../assets/images/worksheet-dan-formulir-AMI.jpg';
 import imgDashboard from '../assets/images/gambar-dashbord-SAS.jpg';
@@ -13,8 +13,6 @@ interface ProductBridgingProps {
 }
 
 export const ProductBridging: React.FC<ProductBridgingProps> = ({ onSeeOfferClick }) => {
-  const [zoomImage, setZoomImage] = useState<{ src: string; title: string } | null>(null);
-
   const handleScrollToOffer = (e: React.MouseEvent) => {
     e.preventDefault();
     if (onSeeOfferClick) {
@@ -48,10 +46,7 @@ export const ProductBridging: React.FC<ProductBridgingProps> = ({ onSeeOfferClic
             
             {/* Dashboard / AI Tools View */}
             <div className="space-y-3">
-              <div 
-                onClick={() => setZoomImage({ src: imgAiSuite, title: 'AI Productivity Suite — 5 AI Tools & Simulasi' })}
-                className="relative rounded-2xl overflow-hidden border border-slate-700 bg-slate-900 group shadow-lg cursor-pointer"
-              >
+              <div className="relative rounded-2xl overflow-hidden border border-slate-700 bg-slate-900 shadow-lg">
                 <div className="px-3 py-1.5 bg-slate-900 text-[11px] text-slate-300 font-mono flex items-center justify-between border-b border-slate-800">
                   <span className="flex items-center gap-1.5 text-blue-400 font-bold">
                     <Bot className="w-3.5 h-3.5" /> AI Productivity Suite
@@ -61,27 +56,24 @@ export const ProductBridging: React.FC<ProductBridgingProps> = ({ onSeeOfferClic
                 <div className="relative">
                   <img 
                     src={imgAiSuite} 
+                    referrerPolicy="no-referrer"
                     onError={(e) => {
-                      (e.currentTarget as HTMLImageElement).src = '/images/5-AI-TOOLS-dan-SIMULASI.jpg';
+                      const target = e.currentTarget as HTMLImageElement;
+                      if (!target.dataset.failed) {
+                        target.dataset.failed = 'true';
+                        target.src = '/images/5-AI-TOOLS-dan-SIMULASI.jpg';
+                      }
                     }}
                     alt="AI Productivity Suite SMART Audit SYSTEM" 
-                    className="w-full h-auto object-cover block group-hover:scale-[1.01] transition-transform"
+                    className="w-full h-auto object-cover block"
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
-                    <span className="bg-slate-900/90 text-white text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-md">
-                      <ZoomIn className="w-3.5 h-3.5" /> Klik untuk perbesar
-                    </span>
-                  </div>
                 </div>
               </div>
             </div>
 
             {/* Worksheets Word & Excel View */}
             <div className="space-y-3">
-              <div 
-                onClick={() => setZoomImage({ src: imgWorksheets, title: '7 Worksheet Word & Excel Audit Mutu Internal' })}
-                className="relative rounded-2xl overflow-hidden border border-slate-700 bg-slate-900 group shadow-lg cursor-pointer"
-              >
+              <div className="relative rounded-2xl overflow-hidden border border-slate-700 bg-slate-900 shadow-lg">
                 <div className="px-3 py-1.5 bg-slate-900 text-[11px] text-slate-300 font-mono flex items-center justify-between border-b border-slate-800">
                   <span className="flex items-center gap-1.5 text-emerald-400 font-bold">
                     <FileSpreadsheet className="w-3.5 h-3.5" /> 7 Worksheet Word & Excel
@@ -91,17 +83,17 @@ export const ProductBridging: React.FC<ProductBridgingProps> = ({ onSeeOfferClic
                 <div className="relative">
                   <img 
                     src={imgWorksheets} 
+                    referrerPolicy="no-referrer"
                     onError={(e) => {
-                      (e.currentTarget as HTMLImageElement).src = '/images/worksheet-dan-formulir-AMI.jpg';
+                      const target = e.currentTarget as HTMLImageElement;
+                      if (!target.dataset.failed) {
+                        target.dataset.failed = 'true';
+                        target.src = '/images/worksheet-dan-formulir-AMI.jpg';
+                      }
                     }}
                     alt="Worksheet dan Formulir AMI Word & Excel" 
-                    className="w-full h-auto object-cover block group-hover:scale-[1.01] transition-transform"
+                    className="w-full h-auto object-cover block"
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
-                    <span className="bg-slate-900/90 text-white text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-md">
-                      <ZoomIn className="w-3.5 h-3.5" /> Klik untuk perbesar
-                    </span>
-                  </div>
                 </div>
               </div>
             </div>
@@ -140,23 +132,20 @@ export const ProductBridging: React.FC<ProductBridgingProps> = ({ onSeeOfferClic
                 </p>
 
                 {/* Visual Image Preview */}
-                <div 
-                  onClick={() => setZoomImage({ src: imgChecklist, title: 'AI Checklist & 5W+1H Generator' })}
-                  className="mb-4 rounded-xl overflow-hidden border border-slate-800 bg-slate-900 shadow-md group cursor-pointer relative"
-                >
+                <div className="mb-4 rounded-xl overflow-hidden border border-slate-800 bg-slate-900 shadow-md relative">
                   <img 
                     src={imgChecklist} 
+                    referrerPolicy="no-referrer"
                     onError={(e) => {
-                      (e.currentTarget as HTMLImageElement).src = '/images/Cek-List-Audit-dan-Simulasi.jpg';
+                      const target = e.currentTarget as HTMLImageElement;
+                      if (!target.dataset.failed) {
+                        target.dataset.failed = 'true';
+                        target.src = '/images/Cek-List-Audit-dan-Simulasi.jpg';
+                      }
                     }}
                     alt="AI Checklist & 5W+1H Generator Preview" 
-                    className="w-full h-auto max-h-48 object-cover object-top block group-hover:scale-[1.02] transition-transform duration-200"
+                    className="w-full h-auto max-h-48 object-cover object-top block"
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
-                    <span className="bg-slate-900/80 text-white text-[11px] font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
-                      <ZoomIn className="w-3 h-3" /> Perbesar
-                    </span>
-                  </div>
                 </div>
               </div>
 
@@ -178,23 +167,20 @@ export const ProductBridging: React.FC<ProductBridgingProps> = ({ onSeeOfferClic
                 </p>
 
                 {/* Visual Image Preview */}
-                <div 
-                  onClick={() => setZoomImage({ src: imgPlor, title: 'AI PLOR Formulator — Problem, Location, Objective Evidence, Requirement' })}
-                  className="mb-4 rounded-xl overflow-hidden border border-slate-800 bg-slate-900 shadow-md group cursor-pointer relative"
-                >
+                <div className="mb-4 rounded-xl overflow-hidden border border-slate-800 bg-slate-900 shadow-md relative">
                   <img 
                     src={imgPlor} 
+                    referrerPolicy="no-referrer"
                     onError={(e) => {
-                      (e.currentTarget as HTMLImageElement).src = '/images/Generator-Laporan-Temuan-PLOR.jpg';
+                      const target = e.currentTarget as HTMLImageElement;
+                      if (!target.dataset.failed) {
+                        target.dataset.failed = 'true';
+                        target.src = '/images/Generator-Laporan-Temuan-PLOR.jpg';
+                      }
                     }}
                     alt="AI PLOR Formulator Preview" 
-                    className="w-full h-auto max-h-48 object-cover object-top block group-hover:scale-[1.02] transition-transform duration-200"
+                    className="w-full h-auto max-h-48 object-cover object-top block"
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
-                    <span className="bg-slate-900/80 text-white text-[11px] font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
-                      <ZoomIn className="w-3 h-3" /> Perbesar
-                    </span>
-                  </div>
                 </div>
               </div>
 
@@ -216,23 +202,20 @@ export const ProductBridging: React.FC<ProductBridgingProps> = ({ onSeeOfferClic
                 </p>
 
                 {/* Visual Image Preview */}
-                <div 
-                  onClick={() => setZoomImage({ src: imgCapa, title: 'AI CAPA & 5-Why Root Cause Assistant' })}
-                  className="mb-4 rounded-xl overflow-hidden border border-slate-800 bg-slate-900 shadow-md group cursor-pointer relative"
-                >
+                <div className="mb-4 rounded-xl overflow-hidden border border-slate-800 bg-slate-900 shadow-md relative">
                   <img 
                     src={imgCapa} 
+                    referrerPolicy="no-referrer"
                     onError={(e) => {
-                      (e.currentTarget as HTMLImageElement).src = '/images/CAPA.jpg';
+                      const target = e.currentTarget as HTMLImageElement;
+                      if (!target.dataset.failed) {
+                        target.dataset.failed = 'true';
+                        target.src = '/images/CAPA.jpg';
+                      }
                     }}
                     alt="AI CAPA / 5-Why Assistant Preview" 
-                    className="w-full h-auto max-h-48 object-cover object-top block group-hover:scale-[1.02] transition-transform duration-200"
+                    className="w-full h-auto max-h-48 object-cover object-top block"
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
-                    <span className="bg-slate-900/80 text-white text-[11px] font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
-                      <ZoomIn className="w-3 h-3" /> Perbesar
-                    </span>
-                  </div>
                 </div>
               </div>
 
@@ -254,23 +237,20 @@ export const ProductBridging: React.FC<ProductBridgingProps> = ({ onSeeOfferClic
                 </p>
 
                 {/* Visual Image Preview */}
-                <div 
-                  onClick={() => setZoomImage({ src: imgIso19011, title: 'ISO 19011 Co-Pilot Assistant' })}
-                  className="mb-4 rounded-xl overflow-hidden border border-slate-800 bg-slate-900 shadow-md group cursor-pointer relative"
-                >
+                <div className="mb-4 rounded-xl overflow-hidden border border-slate-800 bg-slate-900 shadow-md relative">
                   <img 
                     src={imgIso19011} 
+                    referrerPolicy="no-referrer"
                     onError={(e) => {
-                      (e.currentTarget as HTMLImageElement).src = '/images/ISO-19011.jpg';
+                      const target = e.currentTarget as HTMLImageElement;
+                      if (!target.dataset.failed) {
+                        target.dataset.failed = 'true';
+                        target.src = '/images/ISO-19011.jpg';
+                      }
                     }}
                     alt="ISO 19011 Co-Pilot Assistant Preview" 
-                    className="w-full h-auto max-h-48 object-cover object-top block group-hover:scale-[1.02] transition-transform duration-200"
+                    className="w-full h-auto max-h-48 object-cover object-top block"
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
-                    <span className="bg-slate-900/80 text-white text-[11px] font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
-                      <ZoomIn className="w-3 h-3" /> Perbesar
-                    </span>
-                  </div>
                 </div>
               </div>
 
@@ -292,23 +272,20 @@ export const ProductBridging: React.FC<ProductBridgingProps> = ({ onSeeOfferClic
                 </p>
 
                 {/* Visual Image Preview */}
-                <div 
-                  onClick={() => setZoomImage({ src: imgWorksheets, title: '7 Worksheet Word & Excel Editable' })}
-                  className="mb-4 rounded-xl overflow-hidden border border-slate-800 bg-slate-900 shadow-md group cursor-pointer relative"
-                >
+                <div className="mb-4 rounded-xl overflow-hidden border border-slate-800 bg-slate-900 shadow-md relative">
                   <img 
                     src={imgWorksheets} 
+                    referrerPolicy="no-referrer"
                     onError={(e) => {
-                      (e.currentTarget as HTMLImageElement).src = '/images/worksheet-dan-formulir-AMI.jpg';
+                      const target = e.currentTarget as HTMLImageElement;
+                      if (!target.dataset.failed) {
+                        target.dataset.failed = 'true';
+                        target.src = '/images/worksheet-dan-formulir-AMI.jpg';
+                      }
                     }}
                     alt="7 Worksheet Word & Excel Editable Preview" 
-                    className="w-full h-auto max-h-48 object-cover object-top block group-hover:scale-[1.01] transition-transform duration-200"
+                    className="w-full h-auto max-h-48 object-cover object-top block"
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
-                    <span className="bg-slate-900/80 text-white text-[11px] font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
-                      <ZoomIn className="w-3 h-3" /> Perbesar
-                    </span>
-                  </div>
                 </div>
               </div>
 
@@ -439,39 +416,6 @@ export const ProductBridging: React.FC<ProductBridgingProps> = ({ onSeeOfferClic
         </div>
 
       </div>
-
-      {/* Lightbox Zoom Modal */}
-      {zoomImage && (
-        <div 
-          className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6"
-          onClick={() => setZoomImage(null)}
-        >
-          <div 
-            className="relative max-w-4xl w-full bg-slate-950 rounded-2xl overflow-hidden shadow-2xl border border-slate-800 flex flex-col max-h-[92vh]"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="px-4 py-3 bg-slate-950 border-b border-slate-800 flex items-center justify-between text-white">
-              <span className="text-xs sm:text-sm font-bold text-slate-200 truncate pr-4">
-                {zoomImage.title}
-              </span>
-              <button
-                onClick={() => setZoomImage(null)}
-                className="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center transition-colors cursor-pointer shrink-0"
-                aria-label="Tutup"
-              >
-                <X className="w-4 h-4" />
-              </button>
-            </div>
-            <div className="flex-1 overflow-auto p-2 sm:p-4 bg-slate-950 flex items-center justify-center">
-              <img 
-                src={zoomImage.src} 
-                alt={zoomImage.title}
-                className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-lg"
-              />
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 };

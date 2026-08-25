@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { ShoppingBag, ShieldCheck, MessageCircle, Sparkles, X, ZoomIn } from 'lucide-react';
+import React from 'react';
+import { ShoppingBag, ShieldCheck, MessageCircle, Sparkles } from 'lucide-react';
 import { CHECKOUT_URL, getWhatsAppUrl, trackCheckoutClick, trackWhatsAppClick } from '../constants';
 import imgDashboard from '../assets/images/gambar-dashbord-SAS.jpg';
 
@@ -8,8 +8,6 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = () => {
-  const [isZoomOpen, setIsZoomOpen] = useState(false);
-
   const handleHeroBuyClick = () => {
     trackCheckoutClick('hero_buy', 'Hero - Dapatkan SMART Audit System Rp497.000');
   };
@@ -61,25 +59,21 @@ export const Hero: React.FC<HeroProps> = () => {
               </div>
 
               {/* Dashboard image display */}
-              <div 
-                onClick={() => setIsZoomOpen(true)}
-                className="relative group bg-slate-950 cursor-pointer"
-              >
+              <div className="relative bg-slate-950">
                 <img 
                   src={imgDashboard} 
                   referrerPolicy="no-referrer"
                   onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).src = "/images/gambar-dashbord-SAS.jpg";
+                    const target = e.currentTarget as HTMLImageElement;
+                    if (!target.dataset.failed) {
+                      target.dataset.failed = 'true';
+                      target.src = "/images/gambar-dashbord-SAS.jpg";
+                    }
                   }}
                   alt="Dashboard SMART Audit SYSTEM — AI Checklist, AI PLOR, AI CAPA, Worksheet, Modul" 
-                  className="w-full h-auto object-cover block group-hover:scale-[1.005] transition-transform duration-200"
+                  className="w-full h-auto object-cover block"
                   loading="eager"
                 />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
-                  <span className="bg-slate-900/90 text-white text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-md">
-                    <ZoomIn className="w-3.5 h-3.5" /> Klik untuk perbesar tampilan
-                  </span>
-                </div>
               </div>
             </div>
           </div>
@@ -89,42 +83,6 @@ export const Hero: React.FC<HeroProps> = () => {
             <span>⚡ “1 Workflow dari Persiapan → Temuan → CAPA → Pelaporan”</span>
           </div>
         </div>
-
-        {/* Lightbox Zoom Modal for Hero Dashboard */}
-        {isZoomOpen && (
-          <div 
-            className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6"
-            onClick={() => setIsZoomOpen(false)}
-          >
-            <div 
-              className="relative max-w-4xl w-full bg-slate-950 rounded-2xl overflow-hidden shadow-2xl border border-slate-800 flex flex-col max-h-[92vh]"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="px-4 py-3 bg-slate-950 border-b border-slate-800 flex items-center justify-between text-white">
-                <span className="text-xs sm:text-sm font-bold text-slate-200 truncate pr-4">
-                  Dashboard Utama SMART Audit SYSTEM — Workflow Lengkap
-                </span>
-                <button
-                  onClick={() => setIsZoomOpen(false)}
-                  className="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center transition-colors cursor-pointer shrink-0"
-                  aria-label="Tutup"
-                >
-                  <X className="w-4 h-4" />
-                </button>
-              </div>
-              <div className="flex-1 overflow-auto p-2 sm:p-4 bg-slate-950 flex items-center justify-center">
-                <img 
-                  src={imgDashboard} 
-                  onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).src = "/images/gambar-dashbord-SAS.jpg";
-                  }}
-                  alt="Dashboard SMART Audit SYSTEM Full Preview" 
-                  className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-lg"
-                />
-              </div>
-            </div>
-          </div>
-        )}
 
         {/* (4) AGITATE */}
         <div className="bg-white/95 border border-slate-200 rounded-2xl sm:rounded-3xl p-6 sm:p-8 mb-8 sm:mb-10 text-left max-w-2xl mx-auto shadow-sm">

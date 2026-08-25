@@ -26,7 +26,11 @@ export const WorksheetsSection: React.FC = () => {
             src={imgWorksheet}
             referrerPolicy="no-referrer"
             onError={(e) => {
-              (e.currentTarget as HTMLImageElement).src = "https://smartbook.id/kumpulan-gambar/worksheet-dan-formulir-AMI.jpg";
+              const target = e.currentTarget as HTMLImageElement;
+              if (!target.dataset.failed) {
+                target.dataset.failed = 'true';
+                target.src = "/images/worksheet-dan-formulir-AMI.jpg";
+              }
             }}
             alt="Worksheet dan Formulir Audit Mutu Internal Standar ISO 9001"
             className="w-full h-auto object-cover block hover:scale-[1.01] transition-transform duration-300"

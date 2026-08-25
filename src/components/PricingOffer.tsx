@@ -82,7 +82,11 @@ export const PricingOffer: React.FC<PricingOfferProps> = () => {
                   src={img9Modul}
                   referrerPolicy="no-referrer"
                   onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).src = "https://smartbook.id/kumpulan-gambar/9-modul.jpg";
+                    const target = e.currentTarget as HTMLImageElement;
+                    if (!target.dataset.failed) {
+                      target.dataset.failed = 'true';
+                      target.src = "/images/9-modul.jpg";
+                    }
                   }}
                   alt="9 Modul Panduan Praktis ISO 19011"
                   className="w-full h-auto object-cover block group-hover:scale-[1.02] transition-transform duration-300"
@@ -120,7 +124,11 @@ export const PricingOffer: React.FC<PricingOfferProps> = () => {
                   src={imgPodcast}
                   referrerPolicy="no-referrer"
                   onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).src = "https://smartbook.id/kumpulan-gambar/podcast-audio-ulasan-mendalam.jpg";
+                    const target = e.currentTarget as HTMLImageElement;
+                    if (!target.dataset.failed) {
+                      target.dataset.failed = 'true';
+                      target.src = "/images/podcast-audio-ulasan-mendalam.jpg";
+                    }
                   }}
                   alt="Podcast Audio Ulasan Mendalam"
                   className="w-full h-auto object-cover block group-hover:scale-[1.02] transition-transform duration-300"
@@ -158,7 +166,11 @@ export const PricingOffer: React.FC<PricingOfferProps> = () => {
                   src={imgWorksheet}
                   referrerPolicy="no-referrer"
                   onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).src = "https://smartbook.id/kumpulan-gambar/worksheet-dan-formulir-AMI.jpg";
+                    const target = e.currentTarget as HTMLImageElement;
+                    if (!target.dataset.failed) {
+                      target.dataset.failed = 'true';
+                      target.src = "/images/worksheet-dan-formulir-AMI.jpg";
+                    }
                   }}
                   alt="7 Worksheet & Formulir Standar AMI"
                   className="w-full h-auto object-cover block group-hover:scale-[1.02] transition-transform duration-300"
@@ -196,7 +208,11 @@ export const PricingOffer: React.FC<PricingOfferProps> = () => {
                   src={imgIsoCopilot}
                   referrerPolicy="no-referrer"
                   onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).src = "https://smartbook.id/kumpulan-gambar/ISO-19011.jpg";
+                    const target = e.currentTarget as HTMLImageElement;
+                    if (!target.dataset.failed) {
+                      target.dataset.failed = 'true';
+                      target.src = "/images/ISO-19011.jpg";
+                    }
                   }}
                   alt="ISO 19011:2026 Co-Pilot Assistant"
                   className="w-full h-auto object-cover block group-hover:scale-[1.02] transition-transform duration-300"
@@ -234,7 +250,11 @@ export const PricingOffer: React.FC<PricingOfferProps> = () => {
                   src={img5AiTools}
                   referrerPolicy="no-referrer"
                   onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).src = "https://smartbook.id/kumpulan-gambar/5-AI-TOOLS-dan%20-SIMULASI.jpg";
+                    const target = e.currentTarget as HTMLImageElement;
+                    if (!target.dataset.failed) {
+                      target.dataset.failed = 'true';
+                      target.src = "/images/5-AI-TOOLS-dan-SIMULASI.jpg";
+                    }
                   }}
                   alt="5 AI Tools & Simulasi Kasus"
                   className="w-full h-auto object-cover block group-hover:scale-[1.02] transition-transform duration-300"
@@ -272,7 +292,11 @@ export const PricingOffer: React.FC<PricingOfferProps> = () => {
                   src={imgChecklist}
                   referrerPolicy="no-referrer"
                   onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).src = "https://smartbook.id/kumpulan-gambar/Cek-List-Audit-dan-Simulasi.jpg";
+                    const target = e.currentTarget as HTMLImageElement;
+                    if (!target.dataset.failed) {
+                      target.dataset.failed = 'true';
+                      target.src = "/images/Cek-List-Audit-dan-Simulasi.jpg";
+                    }
                   }}
                   alt="AI Checklist & Pertanyaan 5W+1H"
                   className="w-full h-auto object-cover block group-hover:scale-[1.02] transition-transform duration-300"
@@ -310,7 +334,11 @@ export const PricingOffer: React.FC<PricingOfferProps> = () => {
                   src={imgPlor}
                   referrerPolicy="no-referrer"
                   onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).src = "https://smartbook.id/kumpulan-gambar/Generator-Laporan-Temuan-PLOR.jpg";
+                    const target = e.currentTarget as HTMLImageElement;
+                    if (!target.dataset.failed) {
+                      target.dataset.failed = 'true';
+                      target.src = "/images/Generator-Laporan-Temuan-PLOR.jpg";
+                    }
                   }}
                   alt="AI Generator Temuan PLOR"
                   className="w-full h-auto object-cover block group-hover:scale-[1.02] transition-transform duration-300"
@@ -348,7 +376,11 @@ export const PricingOffer: React.FC<PricingOfferProps> = () => {
                   src={imgCapa}
                   referrerPolicy="no-referrer"
                   onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).src = "https://smartbook.id/kumpulan-gambar/CAPA%20.jpg";
+                    const target = e.currentTarget as HTMLImageElement;
+                    if (!target.dataset.failed) {
+                      target.dataset.failed = 'true';
+                      target.src = "/images/CAPA.jpg";
+                    }
                   }}
                   alt="AI Tools CAPA Assistant"
                   className="w-full h-auto object-cover block group-hover:scale-[1.02] transition-transform duration-300"
@@ -386,7 +418,11 @@ export const PricingOffer: React.FC<PricingOfferProps> = () => {
                   src={imgEvaluasi}
                   referrerPolicy="no-referrer"
                   onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).src = "https://smartbook.id/kumpulan-gambar/EVALUASI-PRE-TEST-DAN-POST-TEST.jpg";
+                    const target = e.currentTarget as HTMLImageElement;
+                    if (!target.dataset.failed) {
+                      target.dataset.failed = 'true';
+                      target.src = "/images/EVALUASI-PRE-TEST-DAN-POST-TEST.jpg";
+                    }
                   }}
                   alt="Evaluasi Pre-Test & Post-Test"
                   className="w-full h-auto object-cover block group-hover:scale-[1.02] transition-transform duration-300"

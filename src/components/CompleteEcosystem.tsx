@@ -53,23 +53,22 @@ export const CompleteEcosystem: React.FC = () => {
 
             {/* Visual Image Banner for AI Suite */}
             <div className="mb-6 rounded-2xl overflow-hidden border border-slate-700/80 shadow-lg group bg-slate-950">
-              <a 
-                href="https://smartbook.id/kumpulan-gambar/5-AI-TOOLS-dan%20-SIMULASI.jpg" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="block"
-              >
+              <div className="block">
                 <img 
                   src={img5AiTools} 
                   referrerPolicy="no-referrer"
                   onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).src = "https://smartbook.id/kumpulan-gambar/5-AI-TOOLS-dan%20-SIMULASI.jpg";
+                    const target = e.currentTarget as HTMLImageElement;
+                    if (!target.dataset.failed) {
+                      target.dataset.failed = 'true';
+                      target.src = "/images/5-AI-TOOLS-dan-SIMULASI.jpg";
+                    }
                   }}
                   alt="5 AI Tools dan Simulasi SMART Audit System" 
                   className="w-full h-auto object-cover group-hover:scale-[1.01] transition-transform duration-300" 
                   loading="lazy"
                 />
-              </a>
+              </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
@@ -134,23 +133,22 @@ export const CompleteEcosystem: React.FC = () => {
               {/* Visual Preview Image */}
               <div className="w-full lg:w-5/12">
                 <div className="rounded-2xl overflow-hidden border border-slate-200 bg-slate-950 p-2 shadow-lg group">
-                  <a 
-                    href="https://smartbook.id/kumpulan-gambar/worksheet-dan-formulir-AMI.jpg" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="block"
-                  >
+                  <div className="block">
                     <img 
                       src={imgWorksheet} 
                       referrerPolicy="no-referrer"
                       onError={(e) => {
-                        (e.currentTarget as HTMLImageElement).src = "https://smartbook.id/kumpulan-gambar/worksheet-dan-formulir-AMI.jpg";
+                        const target = e.currentTarget as HTMLImageElement;
+                        if (!target.dataset.failed) {
+                          target.dataset.failed = 'true';
+                          target.src = "/images/worksheet-dan-formulir-AMI.jpg";
+                        }
                       }}
                       alt="Worksheet dan Formulir AMI Word & Excel" 
                       className="w-full h-auto rounded-xl object-cover group-hover:scale-[1.01] transition-transform duration-300"
                       loading="lazy"
                     />
-                  </a>
+                  </div>
                   <div className="mt-2 px-2 py-1 flex items-center justify-between text-[11px] text-slate-400">
                     <span>100% Bebas Password</span>
                     <span className="text-emerald-400 font-bold">Word (.docx) & Excel (.xlsx)</span>
@@ -215,7 +213,11 @@ export const CompleteEcosystem: React.FC = () => {
                       src={img9Modul} 
                       referrerPolicy="no-referrer"
                       onError={(e) => {
-                        (e.currentTarget as HTMLImageElement).src = "https://smartbook.id/kumpulan-gambar/9-modul.jpg";
+                        const target = e.currentTarget as HTMLImageElement;
+                        if (!target.dataset.failed) {
+                          target.dataset.failed = 'true';
+                          target.src = "/images/9-modul.jpg";
+                        }
                       }}
                       alt="9 Modul Pembelajaran Audit Internal" 
                       className="w-full h-36 object-cover group-hover:scale-105 transition-transform duration-300"
@@ -249,7 +251,11 @@ export const CompleteEcosystem: React.FC = () => {
                       src={imgPodcast} 
                       referrerPolicy="no-referrer"
                       onError={(e) => {
-                        (e.currentTarget as HTMLImageElement).src = "https://smartbook.id/kumpulan-gambar/podcast-audio-ulasan-mendalam.jpg";
+                        const target = e.currentTarget as HTMLImageElement;
+                        if (!target.dataset.failed) {
+                          target.dataset.failed = 'true';
+                          target.src = "/images/podcast-audio-ulasan-mendalam.jpg";
+                        }
                       }}
                       alt="Podcast Audio Ulasan Mendalam" 
                       className="w-full h-36 object-cover group-hover:scale-105 transition-transform duration-300"
@@ -283,7 +289,11 @@ export const CompleteEcosystem: React.FC = () => {
                       src={imgPrePostTest} 
                       referrerPolicy="no-referrer"
                       onError={(e) => {
-                        (e.currentTarget as HTMLImageElement).src = "https://smartbook.id/kumpulan-gambar/EVALUASI-PRE-TEST-DAN-POST-TEST.jpg";
+                        const target = e.currentTarget as HTMLImageElement;
+                        if (!target.dataset.failed) {
+                          target.dataset.failed = 'true';
+                          target.src = "/images/EVALUASI-PRE-TEST-DAN-POST-TEST.jpg";
+                        }
                       }}
                       alt="Evaluasi Pre Test dan Post Test" 
                       className="w-full h-36 object-cover group-hover:scale-105 transition-transform duration-300"

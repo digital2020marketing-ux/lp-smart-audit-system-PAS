@@ -48,7 +48,11 @@ export const AiToolsShowcase: React.FC<AiToolsShowcaseProps> = () => {
                   src={imgChecklist}
                   referrerPolicy="no-referrer"
                   onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).src = "https://smartbook.id/kumpulan-gambar/Cek-List-Audit-dan-Simulasi.jpg";
+                    const target = e.currentTarget as HTMLImageElement;
+                    if (!target.dataset.failed) {
+                      target.dataset.failed = 'true';
+                      target.src = "/images/Cek-List-Audit-dan-Simulasi.jpg";
+                    }
                   }}
                   alt="AI Checklist & Simulasi Audit Mutu Internal"
                   className="w-full h-auto object-cover block group-hover:scale-[1.02] transition-transform duration-300"
@@ -111,7 +115,11 @@ export const AiToolsShowcase: React.FC<AiToolsShowcaseProps> = () => {
                   src={imgPlor}
                   referrerPolicy="no-referrer"
                   onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).src = "https://smartbook.id/kumpulan-gambar/Generator-Laporan-Temuan-PLOR.jpg";
+                    const target = e.currentTarget as HTMLImageElement;
+                    if (!target.dataset.failed) {
+                      target.dataset.failed = 'true';
+                      target.src = "/images/Generator-Laporan-Temuan-PLOR.jpg";
+                    }
                   }}
                   alt="AI PLOR Finding Generator"
                   className="w-full h-auto object-cover block group-hover:scale-[1.02] transition-transform duration-300"
@@ -174,7 +182,11 @@ export const AiToolsShowcase: React.FC<AiToolsShowcaseProps> = () => {
                   src={imgCapa}
                   referrerPolicy="no-referrer"
                   onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).src = "https://smartbook.id/kumpulan-gambar/CAPA%20.jpg";
+                    const target = e.currentTarget as HTMLImageElement;
+                    if (!target.dataset.failed) {
+                      target.dataset.failed = 'true';
+                      target.src = "/images/CAPA.jpg";
+                    }
                   }}
                   alt="AI CAPA 5-Why Engine"
                   className="w-full h-auto object-cover block group-hover:scale-[1.02] transition-transform duration-300"
@@ -267,7 +279,11 @@ export const AiToolsShowcase: React.FC<AiToolsShowcaseProps> = () => {
                 src={imgIsoCopilot}
                 referrerPolicy="no-referrer"
                 onError={(e) => {
-                  (e.currentTarget as HTMLImageElement).src = "https://smartbook.id/kumpulan-gambar/ISO-19011.jpg";
+                  const target = e.currentTarget as HTMLImageElement;
+                  if (!target.dataset.failed) {
+                    target.dataset.failed = 'true';
+                    target.src = "/images/ISO-19011.jpg";
+                  }
                 }}
                 alt="ISO 19011:2026 Audit Assistant Co-Pilot Preview" 
                 className="w-full h-auto object-cover block"
